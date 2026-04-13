@@ -1,0 +1,234 @@
+{
+  "users": [
+    {
+      "id": "usr_c084c891336018",
+      "role": "doctor",
+      "email": "feruza@example.com",
+      "password": "12345678",
+      "doctorId": "doc_95c9ad358b3848",
+      "doctorName": "Dr. Feruza Hudoyberdieva",
+      "firstName": "Feruza",
+      "lastName": "Hudoyberdieva",
+      "phone": "987654321",
+      "specialty": "assistant"
+    },
+    {
+      "id": "usr_ab5fbec60feda",
+      "role": "doctor",
+      "email": "ziza@example.com",
+      "password": "1234",
+      "doctorId": "doc_9330dbc6708ac",
+      "doctorName": "Dr. Aziza Ergasheva",
+      "firstName": "Aziza",
+      "lastName": "Ergasheva",
+      "phone": "912345678",
+      "specialty": "cardiology"
+    },
+    {
+      "id": "usr_5656f14938b168",
+      "role": "doctor",
+      "email": "aziza@example.com",
+      "password": "!zazaergasheva",
+      "doctorId": "doc_94b24c222e91b8",
+      "doctorName": "Dr. Alex"
+    },
+    {
+      "id": "usr_doc_001",
+      "role": "doctor",
+      "email": "doctor@example.com",
+      "password": "doctor123",
+      "doctorId": "doc_001",
+      "doctorName": "Dr. Alex"
+    }
+  ],
+  "appointments": [
+    {
+      "id": "apt_001",
+      "patientId": "pat_001",
+      "patientName": "Maria N.",
+      "startsAt": "2026-03-25T10:30:00.000Z",
+      "durationMin": 15,
+      "status": "scheduled",
+      "type": "Follow-up"
+    },
+    {
+      "id": "apt_002",
+      "patientId": "pat_002",
+      "patientName": "John K.",
+      "startsAt": "2026-03-25T11:30:00.000Z",
+      "durationMin": 30,
+      "status": "scheduled",
+      "type": "Consultation"
+    }
+  ],
+  "patients": [
+    {
+      "id": "pat_001",
+      "fullName": "Maria N.",
+      "phone": "+1 (555) 010-1001",
+      "email": "maria@example.com",
+      "dob": "1992-04-18"
+    },
+    {
+      "id": "pat_002",
+      "fullName": "John K.",
+      "phone": "+1 (555) 010-1002",
+      "email": "john@example.com",
+      "dob": "1988-11-02"
+    },
+    {
+      "id": "pat_003",
+      "fullName": "Elena P.",
+      "phone": "+1 (555) 010-1003",
+      "email": "elena@example.com",
+      "dob": "1979-06-09"
+    }
+  ],
+  "prescriptions": [
+    {
+      "id": "rx_b5e3e1a6e50fb8",
+      "createdAt": "2026-04-05T18:58:56.160Z",
+      "patientId": "pat_001",
+      "summary": "sddddddddd",
+      "lines": [
+        "ddddddddddddddddd"
+      ]
+    },
+    {
+      "id": "rx_9f355a93042b08",
+      "createdAt": "2026-03-26T05:45:24.114Z",
+      "patientId": "pat_001",
+      "summary": "Prescription — Hypertension (basic)",
+      "lines": [
+        "Amlodipine 5mg — 1 tab daily",
+        "Lifestyle: low sodium diet"
+      ]
+    },
+    {
+      "id": "rx_8295c9668bdd1",
+      "createdAt": "2026-03-26T05:38:44.858Z",
+      "patientId": "pat_002",
+      "summary": "Prescription — Antibiotic course (example)",
+      "lines": [
+        "Amoxicillin 500mg — 1 cap 3x daily for 7 days",
+        "Hydration, rest"
+      ]
+    },
+    {
+      "id": "rx_bca54a1d1d6d5",
+      "createdAt": "2026-03-26T05:35:55.112Z",
+      "patientId": "pat_001",
+      "summary": "Prescription — Hypertension (basic)",
+      "lines": [
+        "Amlodipine 5mg — 1 tab daily",
+        "Lifestyle: low sodium diet"
+      ]
+    },
+    {
+      "id": "rx_2b21d21a479fd",
+      "createdAt": "2026-03-26T05:14:44.619Z",
+      "patientId": "pat_001",
+      "summary": "just",
+      "lines": [
+        "ssssssssssss",
+        "ssssssssssss"
+      ]
+    },
+    {
+      "id": "rx_b532d51abb581",
+      "createdAt": "2026-03-26T04:26:33.139Z",
+      "patientId": "pat_003",
+      "summary": "Prescription — Antibiotic course (example)",
+      "lines": [
+        "Amoxicillin 500mg — 1 cap 3x daily for 7 days",
+        "Hydration, rest"
+      ]
+    },
+    {
+      "id": "rx_db57184caddac8",
+      "createdAt": "2026-03-26T04:17:29.316Z",
+      "patientId": "pat_003",
+      "summary": "Prescription — Antibiotic course (example)",
+      "lines": [
+        "Amoxicillin 500mg — 1 cap 3x daily for 7 days",
+        "Hydration, rest"
+      ]
+    },
+    {
+      "id": "rx_a0c20ac44dadf",
+      "createdAt": "2026-03-26T00:59:24.870Z",
+      "patientId": "pat_003",
+      "summary": "Prescription — Antibiotic course (example)",
+      "lines": [
+        "Amoxicillin 500mg — 1 cap 3x daily for 7 days",
+        "Hydration, rest"
+      ]
+    },
+    {
+      "id": "rx_07ffbb9b44958",
+      "createdAt": "2026-03-26T00:08:20.429Z",
+      "patientId": "pat_002",
+      "summary": "Prescription — Hypertension (basic)",
+      "lines": [
+        "Amlodipine 5mg — 1 tab daily",
+        "Lifestyle: low sodium diet",
+        "aaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      ]
+    }
+  ],
+  "messages": [
+    
+    {
+      "id": "msg_cf88fe34f2e388",
+      "createdAt": "2026-03-26T09:26:32.981Z",
+      "patientId": "pat_001",
+      "patientName": "Maria N.",
+      "direction": "out",
+      "text": "dfgfg"
+    },
+    {
+      "id": "msg_4795c295897208",
+      "createdAt": "2026-03-26T08:26:18.333Z",
+      "patientId": "pat_001",
+      "patientName": "Maria N.",
+      "direction": "out",
+      "text": "??"
+    },
+    {
+      "id": "msg_9264278f1498f8",
+      "createdAt": "2026-03-26T05:45:37.323Z",
+      "patientId": "pat_001",
+      "patientName": "Unknown",
+      "direction": "out",
+      "text": "yes when?"
+    },
+    {
+      "id": "msg_001",
+      "patientId": "pat_001",
+      "patientName": "Maria N.",
+      "text": "Hi doctor, can we reschedule?",
+      "createdAt": "2026-03-25T09:00:00.000Z",
+      "direction": "in"
+    }
+  ],
+  "availabilityByDate": {
+    "2026-03-26": {
+      "date": "2026-03-26",
+      "timezone": "Asia/Tashkent",
+      "blocks": [
+        {
+          "id": "1774509291684",
+          "start": "13:15",
+          "end": "13:45",
+          "location": "Clinic"
+        }
+      ],
+      "exceptions": [
+        {
+          "id": "1774518416839",
+          "note": "hurry up"
+        }
+      ]
+    }
+  }
+}
