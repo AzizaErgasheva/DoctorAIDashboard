@@ -1,4 +1,4 @@
-const DEFAULT_BASE_URL = 'http://localhost:3000/api'
+const DEFAULT_BASE_URL = '/api'
 
 function resolveBaseUrl() {
   const fromEnv = import.meta?.env?.VITE_API_BASE_URL
