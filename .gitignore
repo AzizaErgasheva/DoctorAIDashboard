@@ -25,3 +25,6 @@ dist-ssr
 
 # ML Model files
 *.pth
+
+# Vite cache
+.vite
