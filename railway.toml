@@ -5,7 +5,7 @@
 builder = "NIXPACKS"
 
 [deploy]
-startCommand = "npm start"
+startCommand = "cd backend && npm start"
 healthcheckPath = "/health"
 healthcheckTimeout = 300
 restartPolicyType = "ON_FAILURE"
@@ -15,5 +15,5 @@ restartPolicyType = "ON_FAILURE"
 NIXPACKS_PYTHON_VERSION = "3.11"
 
 [build.buildCommand]
-# Install Python deps first, then Node.js deps
-command = "pip install -r requirements.txt && npm install"
+# Install Python deps first, then Node.js deps in backend directory
+command = "cd backend && pip install -r requirements.txt && npm install"
