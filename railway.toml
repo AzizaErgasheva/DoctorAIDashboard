@@ -3,17 +3,14 @@
 
 [build]
 builder = "NIXPACKS"
+buildCommand = "cd backend && pip install -r requirements.txt && npm install"
+
+[build.env]
+# Force Python installation
+NIXPACKS_PYTHON_VERSION = "3.11"
 
 [deploy]
 startCommand = "cd backend && npm start"
 healthcheckPath = "/health"
 healthcheckTimeout = 300
 restartPolicyType = "ON_FAILURE"
-
-[build.env]
-# Force Python installation
-NIXPACKS_PYTHON_VERSION = "3.11"
-
-[build.buildCommand]
-# Install Python deps first, then Node.js deps in backend directory
-command = "cd backend && pip install -r requirements.txt && npm install"
