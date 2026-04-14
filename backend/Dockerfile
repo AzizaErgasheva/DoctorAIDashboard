@@ -11,17 +11,20 @@ RUN apt-get update && apt-get install -y \
 # Set working directory
 WORKDIR /app
 
-# Copy package files
-COPY package*.json ./
-COPY requirements.txt ./
+# Copy backend directory first
+COPY backend ./backend
+
+# Copy package files from backend
+COPY backend/package*.json ./backend/
+COPY backend/requirements.txt ./backend/
 
 # Install Python dependencies first
-RUN pip3 install --no-cache-dir -r requirements.txt
+RUN cd backend && pip3 install --no-cache-dir -r requirements.txt
 
 # Install Node.js dependencies
-RUN npm ci --only=production
+RUN cd backend && npm ci --only=production
 
-# Copy source code
+# Copy remaining source code
 COPY . .
 
 # Create non-root user
@@ -36,4 +39,5 @@ HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
     CMD curl -f http://localhost:3000/health || exit 1
 
 # Start the application
+WORKDIR /app/backend
 CMD ["npm", "start"]
