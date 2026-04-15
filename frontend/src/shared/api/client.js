@@ -24,8 +24,17 @@ function normalizePath(path) {
 
 async function request(method, path, body) {
   const base = resolveBaseUrl()
-  const baseWithSlash = base.endsWith('/') ? base : `${base}/`
-  const url = new URL(normalizePath(path), baseWithSlash).toString()
+  let url
+
+  // In development, use relative URLs (Vite proxy handles them)
+  if (base.startsWith('/')) {
+    url = base + (base.endsWith('/') ? '' : '/') + normalizePath(path)
+  } else {
+    // In production, construct full URL
+    const baseWithSlash = base.endsWith('/') ? base : `${base}/`
+    url = new URL(normalizePath(path), baseWithSlash).toString()
+  }
+
   const token = getAuthToken()
 
   const res = await fetch(url, {

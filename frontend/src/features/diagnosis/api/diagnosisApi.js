@@ -1,5 +1,6 @@
 function resolveDiagnosisApiUrl() {
-  return import.meta?.env?.VITE_DIAGNOSIS_API_URL || ''
+  const fromEnv = import.meta?.env?.VITE_DIAGNOSIS_API_URL
+  return (fromEnv && String(fromEnv)) || '/diagnosis'
 }
 
 async function fileToDataUrl(file) {
@@ -12,8 +13,7 @@ async function fileToDataUrl(file) {
 }
 
 export async function analyzeDiagnosisRemotely(file, checkpoint = 'convnext_small_focal_fold1.pth', modelType = 'classification') {
-  const baseUrl = resolveDiagnosisApiUrl()
-  const apiUrl = baseUrl || '/diagnosis'
+  const apiUrl = resolveDiagnosisApiUrl()
   const imageDataUrl = await fileToDataUrl(file)
   const payload = {
     imageDataUrl,
