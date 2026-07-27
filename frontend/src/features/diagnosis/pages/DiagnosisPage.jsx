@@ -92,7 +92,7 @@ export function DiagnosisPage() {
 
     try {
       // Remote checkpoint inference service with segmentation checkpoint.
-      const remote = await analyzeDiagnosisRemotely(file, 'deeplab_effb4_bce_dice_384 (3).pth', 'segmentation')
+      const remote = await analyzeDiagnosisRemotely(file, 'deeplab_effb4_bce_dice_384.3.pth', 'segmentation')
       setResult({
         mode: 'remote',
         classification: remote.classification ?? 'Unknown',
