@@ -11,7 +11,7 @@ CHECKPOINT_DIR="$(dirname "$0")"
 cd "$CHECKPOINT_DIR"
 
 CLF_FILE="convnext_small_focal_fold1.pth"
-SEG_FILE="deeplab_effb4_bce_dice_384 (3).pth"
+SEG_FILE="deeplab_effb4_bce_dice_384.pth"
 
 CLF_URL="https://github.com/AzizaErgasheva/DoctorAIDashboard/releases/download/v1.0-checkpoints/convnext_small_focal_fold1.pth"
 SEG_URL="https://github.com/AzizaErgasheva/DoctorAIDashboard/releases/download/v1.0-checkpoints/deeplab_effb4_bce_dice_384.3.pth"
