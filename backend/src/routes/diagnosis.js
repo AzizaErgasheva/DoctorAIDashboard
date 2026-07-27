@@ -112,7 +112,7 @@ function fileExists(filePath) {
 
 function runPythonInference(checkpointPath, imagePath, modelType = 'classification') {
   const scriptPath = path.join(__dirname, '../diagnosis_runner.py')
-  const segCheckpointPath = path.resolve(path.join(__dirname, '../../', 'deeplab_effb4_bce_dice_384.3.pth'))
+  const segCheckpointPath = path.resolve(path.join(__dirname, '../../', 'deeplab_effb4_bce_dice_384.pth'))
   const clfCheckpointPath = path.resolve(path.join(__dirname, '../../', 'convnext_small_focal_fold1.pth'))
   return new Promise((resolve, reject) => {
     // The Dockerfile installs python3 (Debian/bullseye has no bare "python"
