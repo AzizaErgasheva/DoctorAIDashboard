@@ -81,4 +81,5 @@ HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
 # Download model checkpoints (skipped if already present, e.g. on restart),
 # then start the application
 WORKDIR /app/backend
-CMD ["sh", "-c", "sh download-checkpoints.sh && npm start"]
+# CMD ["sh", "-c", "sh download-checkpoints.sh && npm start"]
+CMD ["sh", "-c", "sh download-checkpoints.sh; echo '--- Checkpoint files in backend/ ---'; ls -la *.pth; npm start"]
