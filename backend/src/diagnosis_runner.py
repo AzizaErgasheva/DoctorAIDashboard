@@ -235,7 +235,7 @@ def main():
     parser.add_argument('--checkpoint', required=True, help='Path to model checkpoint file (.pth)')
     parser.add_argument('--image', required=True, help='Path to uploaded image file')
     parser.add_argument('--model_type', choices=['classification', 'segmentation'], default='classification', help='Primary model type for this run')
-    parser.add_argument('--seg_checkpoint', type=str, default='deeplab_effb4_bce_dice_384.pth',
+    parser.add_argument('--seg_checkpoint', type=str, default='deeplab_effb4_bce_dice_384.3.pth',
                         help='Path to segmentation checkpoint')
     parser.add_argument('--clf_checkpoint', type=str, default='convnext_small_focal_fold1.pth',
                         help='Path to classification checkpoint')
