@@ -6,7 +6,6 @@ A full-stack clinical dashboard for doctors: patients, appointments, prescriptio
 - **Stack:** React 19 + Vite + MUI + TanStack Query + React Hook Form + Zod + Recharts (frontend) · Express 5 / Node.js (backend) · PyTorch inference via subprocess (ConvNeXt-Small + DeepLabV3+)
 - **Deployment:** Vercel (frontend) + Render (backend, Docker)
 
-> ⚠️ **Known issue found while writing this README** — the models were trained at `384×384`, but the deployed inference code (`classify.py`, `segment.py`, `diagnosis_runner.py`) resizes input images to `224×224` for classification and `512×512` for segmentation. That resolution mismatch between training and serving can measurably hurt real-world accuracy. See [Error analysis](#7-error-analysis) and [Future improvements](#10-future-improvements).
 
 ---
 
