@@ -16,7 +16,6 @@ Doctors reviewing medical images need a fast first read before committing to a d
 1. **What is it?** — an abnormality classification with a confidence score, and
 2. **Where is it?** — a visual region of interest, not just a label, so the doctor can verify the model is looking at the right place rather than trusting a black box.
 
-DoctorAIDashboard puts both of those in front of the doctor inside their actual workflow — the same app where they already manage patients, appointments, and prescriptions — instead of requiring a separate tool. The doctor uploads an image on the Diagnosis page and gets back, in one request: a predicted class (`Normal` or one of 11 abnormality types), a confidence percentage, the full per-class probability breakdown, a segmentation mask, and a red heatmap overlay on the original image.
 
 ## 2. Dataset
 
