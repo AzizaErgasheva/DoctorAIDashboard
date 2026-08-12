@@ -180,7 +180,6 @@ Both models were trained in Google Colab on a **Tesla T4 GPU** (CUDA 12.8), with
 - **Threshold tuning**: every epoch's segmentation threshold was swept to find the value maximizing validation IoU (logged as `thr*`/`iou*`), rather than fixing the threshold at 0.5 — this is why the deployed checkpoint stores its own `best_threshold` instead of the code hardcoding one.
 - **Final training note from the log**: after the architecture search, training + validation sets were meant to be combined (`Train+Val: 14,580 ← used for final training`) for a final production run evaluated against the held-out `Local test` (1,620) and `Real test` (200) sets — but the metrics from that specific final run aren't present in the log I received (the log ends after the 4-architecture search).
 
-> Not available from these logs: exact number of workers/augmentation pipeline for classification (the segmentation side used the standard SMP/Albumentations-style train transforms implied by `tr=`/`va=` loss curves, but the specific augmentation list isn't logged here), and the final retrain's actual epoch count/metrics on the combined Train+Val set.
 
 ## 6. Results
 
@@ -215,7 +214,6 @@ Final-epoch (epoch 12/12) results from the architecture search:
 
 DeepLabV3+/EfficientNet-B4 had the best tuned IoU (0.9022) of the four, by a margin of roughly half a point over U-Net++/EffB4 and FPN/EffB4, and about a point over U-Net++/EffB3 — a real but modest lead, not a blowout.
 
-> **Not available in these logs**: Dice score specifically (the log reports IoU, not Dice, despite the checkpoint filename containing `bce_dice` referring to the *loss function*, not the reported metric), and any metrics from the final production retrain on the combined Train+Val set or its evaluation on the held-out Local/Real test sets.
 
 ## 7. Error analysis
 
@@ -246,7 +244,6 @@ This is present in the original standalone inference scripts too (`IMAGE_SIZE = 
   2. Log in through the frontend.
   3. Open the **Diagnosis** page, upload a PNG/JPG/JPEG/WEBP image, and run analysis to see the classification result, confidence, per-class probability chart, and segmentation overlay.
 
-> Add a screenshot or short screen recording of the Diagnosis page mid-result (upload → prediction → overlay) — the single most convincing thing to show in a portfolio README.
 
 ## 9. Installation
 
